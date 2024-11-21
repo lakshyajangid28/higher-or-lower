@@ -1,0 +1,136 @@
+.game {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  gap: 0px;
+  animation: 0.25s fadeIn linear;
+}
+
+.left-container {
+  width: 50vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-name {
+  font-size: 6vh;
+  text-align: center;
+}
+
+.left-value {
+  font-size: 8.5vh;
+  color: #fff989;
+}
+
+.right-container {
+  width: 50vw;
+  height: 100vh;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.right-name {
+  font-size: 6vh;
+  text-align: center;
+}
+
+.right-value {
+  font-size: 8.5vh;
+  color: #fff989;
+  display: none; 
+}
+
+.right-container button {
+    color: #fff989;
+    background-color: transparent;
+    border: 0.125rem white solid;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 10px;
+    width: 12.5rem;
+    border-radius: 2.5rem;
+    transition: 1s;
+}
+
+.right-container button span {
+    color: white;
+}
+
+.right-container button:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.right-container button:hover span {
+    color: black;
+}
+
+.middle-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.high-score {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: bold;
+  word-spacing: 1px;
+  letter-spacing: 1px;
+  bottom: 1%;
+  left: 1%;
+}
+
+.score {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: bold;
+  word-spacing: 1px;
+  letter-spacing: 1px;
+  bottom: 1%;
+  right: 1%;
+}
+
+@media (max-width: 750px) {
+  .game {
+    flex-direction: column;
+  }
+  .left-container {
+    width: 100vw;
+    height: 50vh;
+  }
+  .right-container {
+    width: 100vw;
+    height: 50vh;
+  }
+  .high-score {
+    top: 0%;
+    left: 0%;
+  }
+  .score {
+    bottom: 0%;
+    left: 0%;
+  }
+}
